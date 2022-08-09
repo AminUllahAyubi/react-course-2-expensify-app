@@ -10,11 +10,6 @@ import { sortByAmount } from "./actions/filters";
 import { sortByDate } from "./actions/filters";
 import visibleExpense from './selectors/expenses';
 const store=configureStore();
-store.dispatch(addExpense({description:'water bill',amount:4500}));
-store.dispatch(addExpense({description:'Gas bill'}))
-store.dispatch(addExpense({description:"Rent",amount:100000}))
-const state=store.getState();
-const visibleExpenses=visibleExpense(state.expenses,state.filters);
 const jsx=(
     <Provider store={store}>
         <AppRouter></AppRouter>
